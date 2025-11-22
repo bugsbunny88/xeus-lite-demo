@@ -8,7 +8,7 @@ dependencies:
   - nbformat>=5.10.4,<6
 
   # Scientific computing & data analysis
-  - numpy>=1,<2
+  - numpy>=1.0,<2
   - pandas>=1.5.3,<3
   - matplotlib>=3.8.4,<4
   - scipy>=1.11.1,<2
@@ -34,7 +34,7 @@ dependencies:
   # CLI & UX
   - rich>=14.2.0,<15
   #- click>=8.3.1,<9
-  - typer>=0.20.0,<0.21
+  #- typer>=0.20.0,<0.21
 
   # Data formats & serialization
   - json5>=0.12.1,<0.13
