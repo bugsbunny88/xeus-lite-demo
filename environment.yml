@@ -8,87 +8,70 @@ dependencies:
   - ipywidgets>=8.1.8,<9
   - nbformat>=5.10.4,<6
 
-  # Scientific computing & data analysis
-  - numpy>=1,<3
-  - pandas>=1.5.3,<3
-  - matplotlib>=3.8.4,<4
-  - scipy>=1.11.1,<2
-  - scikit-learn>=1.1.1,<2
-  - plotly>=6.5.0,<7
-  - seaborn>=0.13.2,<0.14
-  - folium>=0.20.0,<0.21
+    # Scientific computing & data analysis
+  - numpy>=1,<3           # Expanded upper bound: Pyodide is 2.2.5, original was <2
+  - pandas>=1.5.3,<3      # Expanded upper bound: Pyodide is 2.3.2, original was <2
+  - matplotlib>=3.5,<4    # Pyodide (3.8.4) fits within original range
+  - scipy>=1.11.1,<2      # Pyodide (1.14.1) fits within original range
+  - scikit-learn>=1.1.1,<2 # Pyodide (1.7.0) fits within original range
+  - altair>=5.5.0,<7      # Widened lower bound: Pyodide is 5.5.0, original was >=6.0.0
 
   # Data processing & utilities
-  - requests>=2.31.0,<3
-  - tqdm>=4.66.2,<5
-  - toolz>=1.1.0,<2
-  - arrow>=1.4.0,<2
-  - openpyxl>=3.0.9,<4
+  - requests>=2.32.4,<3   # Widened lower bound: Pyodide is 2.32.4, original was >=2.32.5
+  - tqdm>=4.67.1,<5       # Pyodide (4.67.1) fits within original range
+  - toolz>=1.0.0,<2       # Widened lower bound: Pyodide is 1.0.0, original was >=1.1.0
 
   # Schema & validation
-  - jsonschema>=4.17.3,<5
-  - pydantic>=2.8.2,<3
-  - marshmallow>=3.26.1,<4
-  - param>=2.3.0,<3
-  - beartype>=0.22.6,<0.23
+  - jsonschema>=4.17.3,<5 # Pyodide (4.23.0) fits within original range
+  - pydantic>=2.8.2,<3    # Pyodide (2.10.6) fits within original range
 
   # CLI & UX
-  - rich>=14.2.0,<15
-  - click>=8.3.1,<9
-  - typer>=0.20.0,<0.21
+  - rich>=13.9.4,<15      # Widened lower bound: Pyodide is 13.9.4, original was >=14.2.0
+  - click>=8.3.0,<9       # Widened lower bound: Pyodide is 8.3.0, original was >=8.3.1
 
   # Data formats & serialization
-  - json5>=0.12.1,<0.13
-  - orjson>=3.10.6,<4
-  - pyaml>=25.7.0,<26
-  - pytz>=2024.1,<2026
-  - beautifulsoup4>=4.14.2,<5
-
-  # System & performance
-  - deepdiff>=8.6.1,<9
-  - pathspec>=0.12.1,<0.13
-  - tenacity>=9.1.2,<10
+  - orjson>=3.10.6,<4     # Pyodide (3.10.16) fits within original range
+  - pytz>=2025.2,<2026    # Pyodide (2025.2) fits within original range
+  - beautifulsoup4>=4.13.3,<5 # Widened lower bound: Pyodide is 4.13.3, original was >=4.14.2
 
   # Math & optimization
-  - swiglpk>=5.0.10,<6
-  - optlang>=1.8.1,<2
-  - pygad>=3.5.0,<4
-  - autograd>=1.8.0,<2
+  - swiglpk>=5.0.10,<6    # Pyodide (5.0.12) fits within original range
+  - optlang>=1.8.2,<2     # Pyodide (1.8.3) fits within original range
+  - autograd>=1.7.0,<2    # Widened lower bound: Pyodide is 1.7.0, original was >=1.8.0
 
   # SQL & query
-  - sqlglot>=28.0.0,<29
-  - jinja2>=3.1.3,<4
+  - jinja2>=3.1.6,<4      # Pyodide (3.1.6) fits within original range
 
-  # storage / arrays / misc
-  - boost-histogram>=1.4.1,<2
-  - brotli>=1.1.0,<2
-  - cffi>=1.15.1,<2
-  - cftime>=1.6.2,<2
-  - cryptography>=42.0.2,<43
-  - docutils>=0.18.1,<0.22
-  - fonttools>=4.39.4,<5
-  - ipython>=9.0.2,<10
-  - joblib>=1.4.0,<2
-  - kiwisolver>=1.3.2,<2
-  - logbook>=1.6.0,<2
-  - markupsafe>=3.0.2,<4
-  - patsy>=1.0.1,<2
-  - peewee>=3.17.3,<4
-  - pillow>=10.2.0,<11
-  - pyproj>=3.6.1,<4
-  - pyrsistent>=0.18.1,<0.19
-  - pytest>=8.3.2,<9
-  - pywavelets>=1.4.1,<2
-  - sqlalchemy>=2.0.32,<3
-  - statsmodels>=0.14.1,<0.15
-  - sympy>=1.12,<2
-  - traits>=7.0.2,<8
-  - wrapt>=1.17.2,<2
-  - zarr>=2.10.3,<3
-  - diskcache>=5.6.3,<6
-  - aiohttp>=3.9.5,<4
-  - jupytext>=1.18.1,<2
-  - altair>=5.3.0,<7
-  - networkx>=3.2,<4
-  - simpy>=4.1.1,<5
-  - pandera>=0.22.1,<0.23
+  # Storage / arrays / misc
+  - boost-histogram>=1.4.1,<2 # Pyodide (1.6.1) fits within original range
+  - brotli>=1.1.0,<2      # Pyodide (1.1.0) fits within original range
+  - cffi>=1.15.1,<2       # Pyodide (1.17.1) fits within original range
+  - cftime>=1.6.2,<2      # Pyodide (1.6.4) fits within original range
+  - cryptography>=42.0.2,<47 # Expanded upper bound: Pyodide is 46.0.1, original was <43
+  - docutils>=0.18.1,<0.22 # Expanded upper bound: Pyodide is 0.21.2, original was <0.19
+  - fonttools>=4.39.4,<5  # Pyodide (4.56.0) fits within original range
+  - future>=1.0.0,<2      # Pyodide (1.0.0) fits within original range
+  - ipython>=9.0.2,<10    # Pyodide (9.0.2) fits within original range
+  - joblib>=1.4.0,<2      # Pyodide (1.4.2) fits within original range
+  - kiwisolver>=1.3.2,<2  # Pyodide (1.4.8) fits within original range
+  - logbook>=1.6.0,<2     # Pyodide (1.8.0) fits within original range
+  - lxml>=4.9.4,<7        # Expanded upper bound: Pyodide is 6.0.2, original was <5
+  - markupsafe>=3.0.2,<4  # Pyodide (3.0.2) fits within original range
+  - patsy>=1.0.1,<2       # Pyodide (1.0.1) fits within original range
+  - peewee>=3.17.3,<4     # Pyodide (3.17.9) fits within original range
+  - pillow>=10.3.0,<12    # Expanded upper bound: Pyodide is 11.3.0, original was <11
+  - protobuf>=4.22.3,<7   # Expanded upper bound: Pyodide is 6.31.1, original was <5
+  - pyrsistent>=0.18.1,<0.21 # Expanded upper bound: Pyodide is 0.20.0, original was <0.19
+  - pytest>=8.3.2,<9      # Pyodide (8.3.5) fits within original range
+  - pywavelets>=1.4.1,<2  # Pyodide (1.8.0) fits within original range
+  - pyyaml>=6.0,<7        # Pyodide (6.0.2) fits within original range
+  - regex>=2022.1.18,<2025 # Expanded upper bound: Pyodide is 2024.11.6, original was <2023
+  - setuptools>=76.0.0,<81 # Widened lower bound: Pyodide is 76.0.0, original was >=80.9.0
+  - sqlalchemy>=2.0.32,<3 # Pyodide (2.0.39) fits within original range
+  - statsmodels>=0.14.1,<0.15 # Pyodide (0.14.4) fits within original range
+  - sympy>=1.13.3,<2      # Widened lower bound: Pyodide is 1.13.3, original was >=1.14.0
+  - traits>=7.0.2,<8      # Pyodide (7.0.2) fits within original range
+  - wrapt>=1.17.2,<2      # Pyodide (1.17.2) fits within original range
+  - diskcache>=5.6.3,<6   # Pyodide (5.6.3) fits within original range
+  - aiohttp>=3.11.13,<4   # Widened lower bound: Pyodide is 3.11.13, original was >=3.13.2
+  - networkx>=3.2,<4      # Pyodide (3.4.2) fits within original range
