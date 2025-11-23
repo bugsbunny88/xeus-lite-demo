@@ -24,7 +24,6 @@ dependencies:
 
   # CLI & UX
   - rich>=13.9.4,<15      # Widened lower bound: Pyodide is 13.9.4, original was >=14.2.0
-  - click>=8.3.0,<9       # Widened lower bound: Pyodide is 8.3.0, original was >=8.3.1
 
   # Data formats & serialization
   - orjson>=3.10.6,<4     # Pyodide (3.10.16) fits within original range
