@@ -7,7 +7,7 @@ dependencies:
 
     # Scientific computing & data analysis
   - numpy>=1,<2           # Expanded upper bound: Pyodide is 2.2.5, original was <2
-  - pandas>=1.5.3,<2      # Expanded upper bound: Pyodide is 2.3.2, original was <2
+  - pandas>=1.5.3,<3      # Expanded upper bound: Pyodide is 2.3.2, original was <2
   - matplotlib>=3.5,<4    # Pyodide (3.8.4) fits within original range
   - scipy>=1.11.1,<2      # Pyodide (1.14.1) fits within original range
   - scikit-learn>=1.1.1,<2 # Pyodide (1.7.0) fits within original range
